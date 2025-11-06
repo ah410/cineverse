@@ -19,8 +19,9 @@ I'm using VS Code running Windows 10 for the below instructions.
         1. If Windows isn't allowing scripts to run on your system. You'll need to open PowerShell as Administrator and run this line `Set-ExecutionPolicy RemoteSigned`
 3. Install dependencies in requirements.txt(includes pytest for unittesting)
     1. Run this line in your terminal `pip install -r requirements.txt`
-4. Type: `flask run` and the website should load up and you'll be good to go!
-4. For unittesting, you can use the `pytest` library or the built in unittesting library for python, `unittest`
+4. `cd api`
+5. Type: `flask run` and the website should load up and you'll be good to go!
+6. For unittesting, you can use the `pytest` library or the built in unittesting library for python, `unittest`
    * For unittesting, please use the sqlite branch. Master branch isn't implemented yet as it uses PostgreSQL instead of sqlite.
     1. Run unittests:
         1. terminal: `pytest app_test.py`
