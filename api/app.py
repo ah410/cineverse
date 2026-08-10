@@ -39,6 +39,7 @@ def after_request(response):
 api_key = os.getenv("TMDB_API_KEY")
 yt_api_key = os.getenv("YouTube_API_KEY")
 postgres_url = os.getenv("POSTGRESQL_URL")
+tmdb_read_access_token = os.getenv("TMDB_READ_ACCESS_TOKEN")
 
 # Set up connection to database using SQLAlchemy
 app.config['SQLALCHEMY_DATABASE_URI'] = postgres_url
@@ -57,7 +58,7 @@ else:
 # Add header from TMDB API Documentation
 headers = {
     "accept": "application/json",
-    "Authorization": "Bearer ***REMOVED-TMDB-TOKEN***"
+    "Authorization": f"Bearer {tmdb_read_access_token}"
 }
 
 base_poster_path_URL = 'http://image.tmdb.org/t/p/w185'

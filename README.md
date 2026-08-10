@@ -58,6 +58,7 @@ notes.
 | Variable | Purpose |
 |---|---|
 | `TMDB_API_KEY` | The Movie Database API key, used to fetch movie listings/details. |
+| `TMDB_READ_ACCESS_TOKEN` | The Movie Database API v4 Read Access Token, sent as the `Authorization: Bearer` header on TMDB requests. |
 | `YouTube_API_KEY` | YouTube Data API v3 key, used to fetch trailer links. Without it, the movie description page (trailer view) won't load; login and home page still work. Get a free key via the [Google Cloud Console](https://console.cloud.google.com/) and the [Google API Python Client docs](https://github.com/googleapis/google-api-python-client/blob/main/docs/start.md). |
 | `SECRET_KEY` | Flask session secret. |
 | `POSTGRESQL_URL` | Postgres connection string (`master` branch only). |
